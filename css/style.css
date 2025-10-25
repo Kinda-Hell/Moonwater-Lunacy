@@ -1,0 +1,538 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color:#0B0C2B;
+    padding: 1rem;
+    background-color: #4B3F72;
+    font-family: IM Fell DW Pica;
+}
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #4B3F72;
+    color: #0B0C2B;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
+    padding: .9rem 3.5rem ;
+    font-family: Darker Grotesque;
+}
+
+.btn:hover{
+    color: #E0C97F;
+    background-color: #8B0000;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #4B3F72;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1)
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: #1A1A1A;
+    font-weight: bolder;
+    font-family: Beth Ellen;
+}
+
+header .logo span{
+    color: #8B0000;
+}
+
+header .navbar a{
+    font-size: 3rem;
+    padding: 0 1.5rem;
+    color: #0B0C2B;
+    font-family: Darker Grotesque;
+}
+
+header .navbar a:hover{
+    color: #E0C97F;
+}
+
+header .icons a{
+    font-size: 3rem;
+    color: #0B0C2B;
+    margin-left: 2rem;
+}
+
+header .icons a:hover{
+    color: #E0C97F;
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #0B0C2B;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    display: none;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/moon.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 80rem;
+}
+
+.home .content h3{
+    font-family: IM Fell DW Pica;
+    font-size: 6rem;
+    color: #D8D8D8;
+}
+
+.home .content span{
+    font-family: IM Fell DW Pica;
+    font-size: 2.5rem;
+    color: #eacc6a;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-family: IM Fell DW Pica;
+    font-size: 1.5rem;
+    color: #D8D8D8;
+    line-height: 1.5;
+}
+
+.about{
+    background: linear-gradient(to bottom, #0B0C2B, #4B3F72, #a6a7ce, #D8D8D8);
+}
+
+.about .row{
+    font-family: Darker Grotesque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    background-color: #a6a7ce;
+}
+
+.about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+    text-align: center; 
+}
+
+.about .row .video-container video{
+    width: 75%;
+    border: .5rem solid #8B0000;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+.about .row .video-container h3{
+    position: absolute;
+    font-size: 1.5rem;
+    background-color: #a6a7ce;
+    color: #0d0529;
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+    margin-right: 2rem;
+    padding-top: 2rem;
+}
+
+.about .row .content h3{
+    font-family: IM Fell DW Pica;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p{
+    font-family: Darker Grotesque;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: bold;
+    padding: 3.5rem 0;
+    padding-top: 1rem;
+}
+
+.icon-container{
+    background-color: #D8D8D8;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.icon-container .icons{
+    background: #a6a7ce;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+    padding: 1.5rem;    
+    gap: 1rem;  
+}
+
+.icons img{
+    width: 50px;
+    height: 50px;
+}
+
+.icon-container .icons h3{
+    color: #0d0529;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.icon-container .icons span{
+    color: #0d0529;
+    font-size: 1.3rem;
+}
+
+.products{
+        background: linear-gradient(to bottom, #D8D8D8, #ffffff);
+}
+
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.products .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.products .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img{
+    height: 30rem;
+}
+
+.products .box-container .box:hover .image img{
+    transform: scale(1.05);
+}
+
+.products .box-container .box .image .icons{
+    position: absolute;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .icons{
+    position: absolute;
+    display: flex;
+    bottom: 0; right: 0; left: 0;
+}
+
+.products .box-container .box .image .icons a{
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    width: 50%;
+    background-color: #4b3f72eb;
+    color: #050112;
+}
+
+.products .box-container .box .image .icons .cart-btn{
+    font-family: Darker Grotesque;
+    font-weight: bold;
+    border-left: .1rem solid #a6a7ce;
+    border-right: .1rem solid #a6a7ce;  
+}
+
+.products .box-container .box .image .icons a:hover{
+    background-color: #a6a7ce;
+}
+
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h3{
+    font-family: IM Fell DW Pica;
+    font-size: 2rem;
+}
+
+.products .box-container .box .content p{
+    font-family: Darker Grotesque;
+    font-size: 1.8rem;
+    color: #0d0529;
+}
+
+.products .box-container .box .content .price{
+    font-family: Darker Grotesque;
+    font-size: 2rem;
+    color: #0d0529;
+}
+
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.review .box-container .box p{
+    font-family: Darker Grotesque;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    padding: 2rem;
+}
+
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.review .box-container .box .user img{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box-container .box .user .user-info h3{
+    font-size: 1.6rem;
+    color: #0d0529;
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1.5rem;
+}
+
+.contact .row form{
+    background-color: #a6a7ce;
+    flex:1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .3);
+}
+
+.contact .row form .box{
+    font-family: Darker Grotesque;
+    padding: 1rem;
+    font-size: 1.7rem;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    margin: .7rem;
+    width: 100%;
+}
+
+.contact .row form textarea{
+    resize: none;
+}
+
+.contact .row .image{
+    flex:1 1 40rem;
+}
+
+.contact .row .image img{
+    width: 100%;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    font-family: IM Fell DW Pica;
+    color: #1A1A1A;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+
+.footer .box-container .box a{
+    font-family: Darker Grotesque;
+    display: block;
+    color: #1A1A1A;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+}
+
+.footer .box-container .box a:hover{
+    font-family: IM Fell DW Pica;
+    color: #eacc6a;
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    color: #1A1A1A;
+    padding: 1.5rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px) {
+
+    html{
+        font-size: 55%;
+    }  
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+
+    header .fa-bars{
+        display: block;
+    }  
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #D8D8D8;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        background-color: rgba(255, 255, 254, 0.929);
+        border: .1rem solid rgba(0, 0, 0, .1);
+    }
+
+    .home .content{
+        font-size: 3rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+    }
+
+        .about .row{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .row .content{
+        margin-right: 0;
+        padding-top: 1rem;
+    }
+
+    .about .row .video-container video{
+        width: 100%;
+    }
+}
+
+@media (max-width:450px) {
+
+    html{
+        font-size: 50%;
+    }  
+
+    header{
+        padding: 2rem;
+    }
+
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .icon-container .icons h3{
+    font-size: 2rem;
+    }
+    
+    .icon-container .icons span{
+    font-size: 1.5rem;
+    }
+}
